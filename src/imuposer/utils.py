@@ -6,13 +6,14 @@ from pathlib import Path
 import numpy as np
 import shutil
 
-def get_parser():
+def get_parser_train():
     parser = argparse.ArgumentParser()
     parser.add_argument('--combo_id', help='the combination to run')
     parser.add_argument('--fast_dev_run', default=False, help='fast dev run', action="store_true")
     parser.add_argument('--resume', default=False, help='resume training from checkpoint', action="store_true")
     parser.add_argument('--experiment', help='Experiment name')
     parser.add_argument('--device', help='Device ID', default="0")
+    parser.add_argument('--run_name', help='Name of each run')
 
     return parser
 
